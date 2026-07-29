@@ -1,6 +1,6 @@
 
 
-function ProductCard({ dessert, quantityInCart, onAddToCart}) {
+function ProductCard({ dessert, quantityInCart, onAddToCart, increaseQuantity, decreaseQuantity}) {
    return (
     <div className="product-card">
         <img src={dessert.image.desktop} alt={dessert.name} />
@@ -11,7 +11,12 @@ function ProductCard({ dessert, quantityInCart, onAddToCart}) {
         { quantityInCart === 0 ? (
             <button onClick={() => onAddToCart(dessert)}>Add To Cart</button> 
         ) : (
-            <button>{quantityInCart}</button> 
+            <div className="quantity-cart">
+            <button onClick={() => decreaseQuantity(dessert)}>-</button>
+            <span>{quantityInCart}</span> 
+            <button onClick={() => increaseQuantity(dessert)}>+</button> 
+            
+               </div>
         )}
     </div>
    )

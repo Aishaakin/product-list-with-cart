@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from './assets/vite.svg'
+// import heroImg from './assets/hero.png'
 import dataDessert from './data.json'
 import './App.css'
+
+import ProductList from './components/ProductList'
 
 function App() {
   const [cart, setCart] = useState([])
@@ -34,6 +36,49 @@ function App() {
       setCart([...cart, { ...dessert, quantity: 1}])
     }
   }
+  function increaseQuantity(dessert) {
+    const existingItem = cart.find(item => item.name === dessert.name)
+
+    if(existingItem) {
+      setCart(cart.map(item => {
+        if(item.name === dessert.name) {
+
+        return { ...item, quantity: item.quantity + 1}
+        }
+        return item
+      }))
+    }
+  }
+
+  function decreaseQuantity(dessert) { 
+  const existingItem = cart.find(item => item.name === dessert.name)
+
+  if (existingItem.quantity > 1) {
+    // if the qunatity in cart is more than 1
+    setCart(cart.map(item => {
+      if (item.name === dessert.name) {
+        return { ...item, quantity: item.quantity - 1 }
+      
+      }
+      return item
+    })) 
+  }   else {
+    // quantity is exactly 1 so remove it from the cart entirely
+    setCart(cart.filter(item => item.name !== dessert.name))
+  }
+}
+
+  return (
+    <div className="app">
+      <ProductList 
+      dataDessert={dataDessert}
+      cart={cart}
+      onAddToCart={onAddToCart}
+      increaseQuantity={increaseQuantity}
+      decreaseQuantity={decreaseQuantity}
+      />
+    </div>
+  )
 
 }
  

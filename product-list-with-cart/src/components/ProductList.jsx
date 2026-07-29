@@ -1,7 +1,6 @@
-import dataDessert from '/data.json'
+import ProductCard from './ProductCard'
 
-
-function ProductList({ dataDessert, cart, onAddToCart}) {
+function ProductList({ dataDessert, cart, onAddToCart, increaseQuantity, decreaseQuantity}) {
 
 
   return (
@@ -18,6 +17,8 @@ function ProductList({ dataDessert, cart, onAddToCart}) {
             dessert={dessert}
             quantityInCart={quantityInCart}
             onAddToCart={onAddToCart}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
              />)
        })}
 
