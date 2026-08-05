@@ -3,6 +3,7 @@ import { useState } from 'react'
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 import dataDessert from './data.json'
+import Cart from "./components/Cart"
 import './App.css'
 
 import ProductList from './components/ProductList'
@@ -67,6 +68,10 @@ function App() {
     setCart(cart.filter(item => item.name !== dessert.name))
   }
 }
+  function removeFromCart(dessert) {
+        setCart(cart.filter(item => item.name !== dessert.name))
+        
+       }
 
   return (
     <div className="app">
@@ -76,7 +81,13 @@ function App() {
       onAddToCart={onAddToCart}
       increaseQuantity={increaseQuantity}
       decreaseQuantity={decreaseQuantity}
+      
       />
+      <Cart 
+      cart={cart}
+      cartTotal={cartTotal}
+      removeFromCart={removeFromCart}
+      /> 
     </div>
   )
 
