@@ -1,0 +1,17 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.product_card {
+    background-color: white;
+    border-radius: 13px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.product_card img {
+    border-radius: 12px;
+    width: 100%;
+}

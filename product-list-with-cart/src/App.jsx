@@ -5,7 +5,6 @@ import { useState } from 'react'
 import dataDessert from './data.json'
 import Cart from "./components/Cart"
 import './App.css'
-
 import ProductList from './components/ProductList'
 
 function App() {

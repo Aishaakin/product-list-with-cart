@@ -1,6 +1,8 @@
+import styles from './Cart.module.css'
+
 function Cart({ cart, cartTotal, removeFromCart }) {
     return (
-        <div className="cart">
+        <div className={styles.cart}>
             <h2>Your Cart ({cart.length}) </h2>
 
             {cart.length === 0 ? (

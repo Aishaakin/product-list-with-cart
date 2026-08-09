@@ -5,6 +5,7 @@ function ProductList({ dataDessert, cart, onAddToCart, increaseQuantity, decreas
 
   return (
     <div className="product-list">
+     <h1 className="productcard-title">Desserts</h1>  
        {dataDessert.map(dessert => {
         const cartItem = cart.find(item => item.name === dessert.name)
         const quantityInCart = cartItem ? cartItem.quantity : 0
