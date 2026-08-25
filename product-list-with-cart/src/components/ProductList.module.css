@@ -1,0 +1,10 @@
+.productCardTitle {
+    color: var(--rose-900);
+}
+.productList {
+    padding: 12px;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}

@@ -11,3 +11,46 @@
     font-size: 1.5rem;
     margin-bottom: 16px;
 }
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-radius: 1px solid var(--rose-100);
+    background-color: white;
+}
+.itemName {
+    font-weight: 600;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+.itemDetails {
+    display: flex;
+    gap: 7px;
+    color: var(--rose-500);
+    font-size: 0.875rem;
+}
+.itemQty {
+    color: var(--red);
+    font-weight: 600;
+}
+.itemPrice {
+    color: var(--rose-400);
+}
+.itemTotal {
+    color: var(--rose-500);
+    font-weight: 600;
+}
+.removeBtn {
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--red-500);
+    width: 20px;
+    height: 20px;
+    color: var(--rose-400);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}

@@ -11,15 +11,20 @@ function Cart({ cart, cartTotal, removeFromCart }) {
             ) : (
                 <div>
                     {cart.map(item => (
-                        <div key={item.name}>
-                        <span>{item.name}</span>    
-                        <span>{item.quantity}X</span> 
-                        <span>${(item.price * item.quantity).toFixed(2)}</span> 
-                        <button onClick={() => removeFromCart(item)}>Remove</button>
-                  
+                        <div key={item.name} className={styles.cartItem}>
+                        <div>
+                            <p className={styles.itemName}>{item.name}</p>
+                            <div className={styles.itemDetails}>
+                        <span className={styles.itemQty}>{item.quantity}x</span>    
+                        <span className={styles.itemPrice}>@ ${item.price.toFixed(2)}</span> 
+                        <span className={styles.itemTotal}>${(item.price * item.quantity).toFixed(2)}</span> 
+                        </div>
+                        </div>
+                        <button onClick={() => removeFromCart(item)} className={styles.removeBtn}>×</button>
+                   
                 </div>
                   ))}
-                  <p>Order Total: ${cartTotal.toFixed(2)}</p>
+                  <p className={styles.total}>Order Total: ${cartTotal.toFixed(2)}</p>
                   </div>
             )}
         </div>
