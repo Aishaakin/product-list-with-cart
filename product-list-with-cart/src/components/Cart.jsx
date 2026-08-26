@@ -24,7 +24,15 @@ function Cart({ cart, cartTotal, removeFromCart }) {
                    
                 </div>
                   ))}
-                  <p className={styles.total}>Order Total: ${cartTotal.toFixed(2)}</p>
+                  <div className={styles.orderTotal}>
+                    <span>Order Total</span>
+                    <span className={styles.totalAmount}>${cartTotal.toFixed(2)}</span>
+                  </div>
+
+                  <div className={styles.carbonBanner}>
+                    🌿 This is a <strong>carbon-neutral</strong> delivery
+                  </div>
+                  <button className={styles.confirmBtn}>Confirm Order</button>
                   </div>
             )}
         </div>
