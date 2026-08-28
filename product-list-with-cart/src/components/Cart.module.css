@@ -86,3 +86,18 @@
 .confirmBtn:hover {
     background-color: var(--rose-900);
 }
+.emptyCart {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+     padding: 24px 0;
+}
+.emptyCart img {
+    width: 50%;
+    margin-bottom: 10px;
+}
+.emptyCart p {
+    color: var(--rose-500);
+    font-size: 0.875rem;
+}

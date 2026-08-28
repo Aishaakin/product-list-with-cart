@@ -4,6 +4,9 @@ function OrderConfirmModal ({cart, cartTotal, onStartNewOrder}) {
 
     return (
         <div>
+            <div className={styles.overlay}>
+                <div className={styles.modal}>
+        <img src="/public/assets/images/icon-order-confirmed.svg" alt="successful icon" />            
         <h1>Order Confirmed</h1>
         <p>We hope you enjoy your food!</p>
         <div className={styles.foodModal}>
@@ -27,6 +30,8 @@ function OrderConfirmModal ({cart, cartTotal, onStartNewOrder}) {
             </div>
           
        
+        </div>
+        </div>
         </div>
     )
 }

@@ -6,8 +6,10 @@ function Cart({ cart, cartTotal, removeFromCart, onConfirmOrder }) {
             <h2>Your Cart ({cart.length}) </h2>
 
             {cart.length === 0 ? (
+                <div className={styles.emptyCart}>
+                    <img src="/assets/images/illustration-empty-cart.svg" alt="Empty Icon" />
                 <p>Your added items will appear here</p>
-
+        </div>
             ) : (
                 <div>
                     {cart.map(item => (
@@ -30,7 +32,8 @@ function Cart({ cart, cartTotal, removeFromCart, onConfirmOrder }) {
                   </div>
 
                   <div className={styles.carbonBanner}>
-                    🌿 This is a <strong>carbon-neutral</strong> delivery
+                    <img src="/public/assets/images/icon-carbon-neutral.svg" alt="" />
+                    This is a <strong>carbon-neutral</strong> delivery
                   </div>
                   <button className={styles.confirmBtn} onClick={() => onConfirmOrder()}>Confirm Order</button>
                   </div>
