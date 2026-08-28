@@ -1,6 +1,6 @@
 import styles from './Cart.module.css'
 
-function Cart({ cart, cartTotal, removeFromCart }) {
+function Cart({ cart, cartTotal, removeFromCart, onConfirmOrder }) {
     return (
         <div className={styles.cart}>
             <h2>Your Cart ({cart.length}) </h2>
@@ -32,7 +32,7 @@ function Cart({ cart, cartTotal, removeFromCart }) {
                   <div className={styles.carbonBanner}>
                     🌿 This is a <strong>carbon-neutral</strong> delivery
                   </div>
-                  <button className={styles.confirmBtn}>Confirm Order</button>
+                  <button className={styles.confirmBtn} onClick={() => onConfirmOrder()}>Confirm Order</button>
                   </div>
             )}
         </div>

@@ -6,9 +6,11 @@ import dataDessert from './data.json'
 import Cart from "./components/Cart"
 import './App.css'
 import ProductList from './components/ProductList'
+import OrderConfirmModal from './components/OrderConfirmModal'
 
 function App() {
   const [cart, setCart] = useState([])
+  const [showModal, setShowModal] = useState(false)
 
    const cartTotal = cart.reduce((total, item) => {
       return total + item.price * item.quantity
@@ -72,6 +74,15 @@ function App() {
         
        }
 
+  function handleConfirmOrder() {
+    setShowModal(true)
+  }
+
+  function handleStartNewOrder() {
+    setCart([])
+    setShowModal(false)
+  }
+
   return (
     <div className="app">
       <ProductList 
@@ -86,12 +97,19 @@ function App() {
       cart={cart}
       cartTotal={cartTotal}
       removeFromCart={removeFromCart}
+      onConfirmOrder={handleConfirmOrder}
       /> 
+     {showModal && (
+     <OrderConfirmModal 
+    cart={cart} 
+    cartTotal={cartTotal} 
+    onStartNewOrder={handleStartNewOrder} 
+  />
+)}
     </div>
   )
 
 }
- 
 
 
 export default App
