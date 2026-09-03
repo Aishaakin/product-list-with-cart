@@ -1,13 +1,13 @@
 .category {
     color: var(--rose-500);
     font-size: 0.875rem;
-    margin-top: 15px;
+    margin-top: 24px;
 }
 
 .productCard {
     background-color: white;
     border-radius: 13px;
-    padding-top: 40px;
+    padding: 0 16px 24px;
     position: relative;
 }
 
@@ -26,21 +26,21 @@
     font-weight: 600;
 }
 .btn {
-    border-radius: 8px;
+    border-radius: 30px;
     background-color: white;
     border: 1.5px solid var(--rose-400);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     position: absolute;
     bottom: -20px;
-    left: 30%;
+    left: 50%;
     transform: translateX(-50%);
     padding: 12px 24px;
     display: flex;
     align-items: center;
     gap: 3px;
     cursor: pointer;
-
+    white-space: nowrap;
 
 }
 .btn:hover {
@@ -51,26 +51,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--red);
-    border-radius: 18px;
-    padding: 10px 15px;
-    color: white;
-    font-weight: 600;
     background: transparent;
     border: 1px solid white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: white;
+    font-weight: 600;
     cursor: pointer;
+    font-size: 16px;
+    padding: 0;
 }
 .quantityCart{
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--red);
-    border-radius: 18px;
+    border-radius: 30px;
     padding: 10px 15px;
     color: white;
     font-weight: 600;
-
+    width: 140px;
 }
+
 .imageWrapper {
     position: relative;
 }
@@ -79,4 +86,7 @@
     width: 100%;
     border-radius: 12px;
     display: block;
+}
+.productCardActive {
+  border: 2px solid var(--red);
 }

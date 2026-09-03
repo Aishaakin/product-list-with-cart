@@ -1,5 +1,5 @@
 .cart {
-    background-color: var(--rose-50);
+    background-color: white;
     border-radius: 13px;
     padding: 25px;
     width: 320px;
@@ -100,4 +100,10 @@
 .emptyCart p {
     color: var(--rose-500);
     font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .cart {
+        width: 100%;
+    }
 }

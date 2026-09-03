@@ -8,3 +8,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
+
+
+@media (max-width: 768px) {
+    .productList {
+        grid-template-columns: 1fr;
+    }
+}

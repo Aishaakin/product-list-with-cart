@@ -32,7 +32,7 @@ function Cart({ cart, cartTotal, removeFromCart, onConfirmOrder }) {
                   </div>
 
                   <div className={styles.carbonBanner}>
-                    <img src="/public/assets/images/icon-carbon-neutral.svg" alt="" />
+                    <img src="/assets/images/icon-carbon-neutral.svg" alt="" />
                     This is a <strong>carbon-neutral</strong> delivery
                   </div>
                   <button className={styles.confirmBtn} onClick={() => onConfirmOrder()}>Confirm Order</button>

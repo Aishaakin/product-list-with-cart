@@ -26,4 +26,13 @@ body {
     padding: 48px;
     gap: 32px;
     align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .app {
+    flex-direction: column;
+    padding: 25px;
+  }
 }

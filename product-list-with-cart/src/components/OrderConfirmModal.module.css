@@ -23,10 +23,79 @@
     width: 100%;
     font-weight: 600;
     color: white;
-    border-radius: 16px;
+    border-radius: 20px;
     border: none;
     padding: 14px;
     font-size: 1rem;
     background-color: var(--red);
     cursor: pointer;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        align-items: flex-end;
+    }
+
+    .modal {
+        width: 100%;
+        border-radius: 18px 18px 0 0;
+        max-height: 86vh;
+    }
+}
+
+.cartItem {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rose-100);
+   
+}
+.itemImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.itemName {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.itemInfo {
+    flex: 1;
+
+}
+.itemDetails {
+    display: flex;
+    
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--rose-500);
+}
+
+.itemQty {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.itemTotal {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.totalAmount {
+    margin-bottom: 10px;
+}
+.orderTotal {
+    gap: 8px;
+    margin: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.foodModal {
+    background-color: var(--rose-100);
+    margin-top: 10px;
+}
+.itemPrice {
+    float: end;
 }
