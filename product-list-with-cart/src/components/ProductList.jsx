@@ -2,11 +2,11 @@ import styles from './ProductList.module.css'
 import ProductCard from './ProductCard'
 
 function ProductList({ dataDessert, cart, onAddToCart, increaseQuantity, decreaseQuantity}) {
-
-
   return (
+    <div>
+    <h1 className={styles.productCardTitle}>Desserts</h1>   
     <div className={styles.productList}>
-     <h1 className={styles.productCardTitle}>Desserts</h1>  
+     
        {dataDessert.map(dessert => {
         const cartItem = cart.find(item => item.name === dessert.name)
         const quantityInCart = cartItem ? cartItem.quantity : 0
@@ -26,7 +26,7 @@ function ProductList({ dataDessert, cart, onAddToCart, increaseQuantity, decreas
 
        
        
-
+    </div>
     </div>
   )
 }

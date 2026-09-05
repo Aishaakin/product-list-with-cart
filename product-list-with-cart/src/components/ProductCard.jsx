@@ -6,8 +6,11 @@ function ProductCard({ dessert, quantityInCart, onAddToCart, increaseQuantity, d
        <div className={styles.imageWrapper}>
         <img src={dessert.image.desktop} alt={dessert.name} />
          { quantityInCart === 0 ? (
-            <button onClick={() => onAddToCart(dessert)} className={styles.btn}>Add To Cart</button> 
-        ) : (
+    <button onClick={() => onAddToCart(dessert)} className={styles.btn}>
+      <img src="/assets/images/icon-add-to-cart.svg" alt="" width="16" height="16" className={styles.cartIcon} />
+      Add To Cart
+    </button> 
+) : (
             <div className={styles.quantityCart}>
             <button onClick={() => decreaseQuantity(dessert)} className={styles.quantityBtn}>-</button>
             <span>{quantityInCart}</span> 

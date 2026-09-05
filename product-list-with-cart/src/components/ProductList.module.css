@@ -1,5 +1,6 @@
 .productCardTitle {
     color: var(--rose-900);
+    margin-bottom: 24px;
 }
 .productList {
     padding: 12px;

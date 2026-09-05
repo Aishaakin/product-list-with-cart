@@ -14,7 +14,7 @@
     border-radius: 10px;
     padding: 35px;
     width: 90%;
-    max-width: 420px;
+    max-width: 400px;
     overflow-y: auto;
     max-height: 80vh;
 }
@@ -91,10 +91,14 @@
     margin: 10px 5px;
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
+    /* font-family: RedHat; */
 }
 .foodModal {
     background-color: var(--rose-100);
     margin-top: 10px;
+    padding: 8px 0;
+    border-radius: 8px;
 }
 .itemPrice {
     float: end;

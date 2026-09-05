@@ -24,7 +24,7 @@ function OrderConfirmModal ({cart, cartTotal, onStartNewOrder}) {
   </div>
 ))}
         <div className={styles.orderTotal}>
-        <span>Order Total</span>
+        <span className={styles.total}>Order Total</span>
         <span className={styles.totalAmount}>${cartTotal.toFixed(2)}</span>
         </div>
         

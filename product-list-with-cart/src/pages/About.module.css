@@ -1,0 +1,27 @@
+.about {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--rose-900);
+  margin-bottom: 32px;
+  border-left: 4px solid var(--red);
+  padding-left: 16px;
+}
+
+.p{
+  color: var(--rose-500);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.signature {
+  font-style: italic;
+  color: var(--red);
+  font-weight: 600;
+  margin-top: 40px;
+}

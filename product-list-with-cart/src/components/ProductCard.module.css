@@ -7,7 +7,7 @@
 .productCard {
     background-color: white;
     border-radius: 13px;
-    padding: 0 16px 24px;
+    padding:  16px 24px;
     position: relative;
 }
 
@@ -38,10 +38,9 @@
     padding: 12px 24px;
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 8px;
     cursor: pointer;
     white-space: nowrap;
-
 }
 .btn:hover {
     border-color: var(--red);
@@ -89,4 +88,10 @@
 }
 .productCardActive {
   border: 2px solid var(--red);
+}
+.cartIcon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  flex-shrink: 0;
 }
